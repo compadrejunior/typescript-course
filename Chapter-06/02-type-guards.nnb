@@ -1,0 +1,132 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "# Type Guards\n\n- Type Guarding is the term where you influence the code flow analysis via code.\n- TypeScript uses existing JavaScript behavior which validates your objects \nat runtime to influence the code flow. "
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// Type guards helps with Union Types. The example bellow uses the typeof \n// operator\n\ntype Combinable = string | number;\ntype Numeric = number | boolean;\n\ntype Universal = Combinable & Numeric;\n\nfunction add(a: Combinable, b: Combinable) {\n  if (typeof a === \"string\" || typeof b === \"string\") { // type guard typeof\n    return a.toString() + b.toString();\n  }\n  return a + b;\n}\nadd('a', 'b');"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "\u001b[32m'ab'\u001b[39m"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "add(1, 2)"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "\u001b[33m3\u001b[39m"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// Type guards with JavaScript in operator\n\ntype Admin = {\n  name: string;\n  privileges: string[];\n}\n\ntype Employee = {\n  name: string;\n  startDate: Date;\n}\n\ntype ElevatedEmployee = Admin & Employee;\nconst e1: ElevatedEmployee = {\n  name: 'Max',\n  privileges: ['create-server'],\n  startDate: new Date()\n}\n\ntype UnknownEmployee = Employee | Admin;\n\nfunction printEmployeeInformation(emp: UnknownEmployee) { \n  console.log(`Name: ${emp.name}`);\n  if ('privileges' in emp) { // type guard with in operator \n    console.log(`Privileges: ${emp.privileges}`);\n  }\n  if ('startDate' in emp) {\n    console.log(`Start Date: ${emp.startDate}`); // type guard with in operator\n  }\n}\n\nprintEmployeeInformation(e1);\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "Name: Max",
+                                "Privileges: create-server",
+                                "Start Date: Wed Oct 11 2023 11:42:06 GMT-0300 (Horário Padrão de Brasília)",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// Type guards for classes and objects\n\nclass Car {\n  drive() {\n    console.log('driving');\n  }\n}\n\nclass Truck { \n  drive() {\n    console.log('driving a truck');\n  }\n  loadCargo(amount: number) {\n    console.log('loading cargo', amount);\n  }\n}\n\ntype Vehicle = Car | Truck;\n\nconst v1 = new Car();\nconst v2 = new Truck();\n\nfunction useVehicle(vehicle: Vehicle) {\n  vehicle.drive();\n  if (vehicle instanceof Truck) { // type guard with instanceof operator\n    vehicle.loadCargo(1000);\n  }\n}\nuseVehicle(v1);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "driving",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "useVehicle(v2)"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "driving a truck",
+                                "loading cargo 1000",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

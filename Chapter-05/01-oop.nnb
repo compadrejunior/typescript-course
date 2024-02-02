@@ -1,0 +1,18 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "# Object-Oriented Programming\n\n- Typescript classes implements **Object-Oriented Programming (OOP)** paradigm.\n- In OOP **Classes** are modeled to represent real life **Entities**. \n\n![OOP](./oop.png)\n\n## Classes and Objects (Instances)\n- A class might have methods that describes its expected behaviour.\n- Attributes are properties that a class will have to describe its shape. \n- Objects are instances of those classes that represents a uniquely identified entity\n- We might think a class as a model or template in which object will implement.\n- An object is given all methods and attributes that its class defines.\n- An objects can distinguish from another object by the properties values they have. \n\n![Classes and Objects](./classes-and-objects.png)"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                ""
+            ],
+            "outputs": []
+        }
+    ]
+}
