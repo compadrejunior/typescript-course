@@ -1,0 +1,11 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "# What is TypeScript?\n\nTypescript is a superset for JavaScript.\n\n  > \"TypeScript stands in an unusual relationship to JavaScript. TypeScript offers all of JavaScript’s features, and an additional layer on top of these: TypeScript’s type system.\" https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html\n\n- It's not a new programming language.\n- Instead it takes JavaScript and add new features. \n- Makes writting JS code more powerful.\n- Browsers **can't** execute TypeScript!\n- Your code is compiled into JavaScript so the browser can execute it.\n- Adds types to your code lowering the chance of bugs.\n\n![what is typescript](./whatistypescript.png)"
+            ],
+            "outputs": []
+        }
+    ]
+}

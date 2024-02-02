@@ -4,11 +4,20 @@ This repository is meant for studying TypeScript.
 
 It encompases full TypeScript content organized as a learning path.
 
+In this course you will learn all TypeScript features, when an how to use it.
+
+You will be able to write better code and share your team with confidence.
+
+## Pre-requisites
+
+It is best to have previous JavaScript knowledge, as the basics of JavaScript won't be explained.
+
 ## Dependencies
 
 Install the following resources:
 
 - [Visual Studio Code](https://code.visualstudio.com/download)
+- [Node.js — Download (nodejs.org)](https://nodejs.org/en/download)
 - [Node.js Notebooks (REPL)](https://marketplace.visualstudio.com/items?itemName=donjayamanne.typescript-notebook)
 
 ## How to use it
@@ -30,15 +39,7 @@ You can find more about TypeScript in the following links:
 
 ## About me
 
-<div style="max-width: 100px; height: auto; position: relative; overflow: hidden;">
-   <img src="https://avatars.githubusercontent.com/u/13987735?v=4" style="display: block; 
-   margin: 0 auto;height: auto; 
-   -webkit-border-radius: 50%;
-   -moz-border-radius: 50%; 
-   -ms-border-radius: 50%;
-   -o-border-radius: 50%;
-   border-radius: 50%;" />
-</div>
+![](https://avatars.githubusercontent.com/u/13987735?v=4)
 
 Solution Architect, post-punk, literature, video games, board games and sci-fi lover.
 

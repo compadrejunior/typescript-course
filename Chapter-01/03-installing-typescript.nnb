@@ -1,0 +1,25 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "# Installing TypeScript\n\nTo install TypeScript follow the steps bellow:\n1. In your terminal type\n   ```bash \n   npm install -g typescript\n   ```\n   > ℹ️ Node.js is require to use the node package manager (npm).\n2. If you prefer installing on your local project folder:\n   ```bash\n   npm install typescript --save-dev\n   ```\n   > 👉 Other installing options at https://www.typescriptlang.org/download\n3. Create a folder for your project in another path different from this repo. \n   This will be your project root folder. Example:\n    ```bash\n    mkdir mytsproject\n    ```\n4. Enter your project root folder.\n   ```bash\n   cd mytsproject\n   ```\n5. Open your project folder in VSCode. \n   ```bash\n   code .\n   ```\n6. Create a TypeScript file (any filename with .ts extension). \n   Example. using-ts.\n   ![using ts file](./usingtsfile.png)\n7. Type the following code into your file. \n    ```TypeScript\n    const button = document.querySelector(\"button\");\n    const input1 = document.getElementById(\"num1\")! as HTMLInputElement;\n    const input2 = document.getElementById(\"num2\")! as HTMLInputElement;\n\n    function add(num1: number, num2: number) { \n      return num1 + num2;\n    }\n\n    button?.addEventListener(\"click\", function () { \n      console.log(add(+input1.value, +input2.value));\n    })\n    ```\n    Here you can see that the function parameters are declared with type\n8. Create an index.html file with two input text and a button as bellow. \n   > ℹ️ **Note:** The html file should load a .js (JavaScript) file not .ts \n   > (TypeScript).\n    ```html\n    <!DOCTYPE html>\n    <html lang=\"en\">\n    <head>\n      <meta charset=\"UTF-8\">\n      <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n      <title>Using TS</title>\n      <script src=\"usingts.js\"></script>\n    </head>\n    <body>\n      <form>\n        <input type=\"text\" name=\"num1\" id=\"num1\">\n        <input type=\"text\" name=\"num2\" id=\"num2\">\n        <button>Add</button>\n      </form>\n    </body>\n    </html>\n    ```\n9. Open the index.html file in the Browser.\n10. Open the JavaScript console by pressing Ctrl + Shift + J.\n11. You will see an error telling the JavaScript file your mentioned doesn't \n    exists.\n    ![console error](./consoleerror.png)\n12.\n\n    "
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                ""
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                ""
+            ],
+            "outputs": []
+        }
+    ]
+}

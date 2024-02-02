@@ -1,0 +1,11 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "# Why TypeScript?\n\n- Avoid type errors and unwanted behaviour\n- Write better code\n\n**Example**: JavaScript will concatenate the values, instad of adding the values, \nwhen someone passes strings to the function instead of numbers. \n\n![unwanted behaviour](./unwantedbehaviour.png)\n\nTo avoid this, developers should add validation and sanitization code. \nWith TypeScript, you write better code from start. "
+            ],
+            "outputs": []
+        }
+    ]
+}
