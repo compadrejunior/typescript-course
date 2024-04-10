@@ -74,8 +74,8 @@ To install TypeScript follow the steps bellow:
     npm install typescript --save-dev
     ```
 
-    > [!IMPORTANT]
-    > Node.js is required to use the node package manager (npm). Other install options at [Download TypeScript](https://www.typescriptlang.org/download). You can learn more about installing packages with npm at npm-install.
+> [!IMPORTANT]
+> Node.js is required to use the node package manager (npm). Other install options at [Download TypeScript](https://www.typescriptlang.org/download). You can learn more about installing packages with npm at npm-install.
 
 7.  NPM will download TypeScript library inside your project folder under the node_modules file.
 8.  Open your project folder in VSCode.
@@ -115,9 +115,6 @@ To install TypeScript follow the steps bellow:
 
 11. Create an index.html file with two input text and a button as bellow.
 
-    > [!NOTE]
-    > The html file should load a .js (JavaScript) file not .ts (TypeScript).
-
     ```html
     <!DOCTYPE html>
     <html lang="en">
@@ -135,6 +132,9 @@ To install TypeScript follow the steps bellow:
     </html>
     ```
 
+> [!NOTE]
+> The html file should load a .js (JavaScript) file not .ts (TypeScript).
+
 12. Open the index.html file in the Browser.
 13. Open the JavaScript console by pressing Ctrl + Shift + J.
 14. You will see an error telling the JavaScript file your mentioned doesn't exists. ![Console Error](consoleerror.png)
@@ -144,8 +144,8 @@ To install TypeScript follow the steps bellow:
     npx tsc usingts.ts
     ```
 
-    > [!IMPORTANT]
-    > tsc is the TypeScript compiler. We may run it with npx because it is not globally installed. If your install TypeScript globally, then you should run tsc usingts.ts directly.
+> [!IMPORTANT]
+> tsc is the TypeScript compiler. We may run it with npx because it is not globally installed. If your install TypeScript globally, then you should run tsc usingts.ts directly.
 
 16. You will see a file with the same name but a different extension. E.g. usingts.js. This is our TypeScript source compiled into JavaScript.
 17. Now try to open the index.html file again in your browser and test the page. ![Test the page, for instance, typing 1 an 2 an then clicking the add button.](apptest.png)
