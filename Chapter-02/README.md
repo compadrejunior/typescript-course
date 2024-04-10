@@ -1,36 +1,22 @@
-# Chapter 2: TypeScript Basics & Basic Types
+# Chapter 2: TypeScript Basics and Types
 
-- [Chapter 2: TypeScript Basics \& Basic Types](#chapter-2-typescript-basics--basic-types)
-- [Core Types](#core-types)
-- [TypeScript Types vs JavaScript Types](#typescript-types-vs-javascript-types)
-- [Working with Numbers, Strings \& Booleans](#working-with-numbers-strings--booleans)
-- [Type Assignment and Type Inference](#type-assignment-and-type-inference)
-- [Object Types](#object-types)
-- [Array Types](#array-types)
-- [Tuples](#tuples)
-- [Enum](#enum)
-  - [Numeric enums](#numeric-enums)
-  - [String enums](#string-enums)
-  - [Heterogeneous enums](#heterogeneous-enums)
-  - [Computed and constant members](#computed-and-constant-members)
-  - [Union enums and enum member types](#union-enums-and-enum-member-types)
-  - [Enums at runtime](#enums-at-runtime)
-  - [Enums at compile time](#enums-at-compile-time)
-  - [Ambient enums](#ambient-enums)
-  - [Objects vs Enums](#objects-vs-enums)
-- [The `any` Type](#the-any-type)
-- [Type Annotations on Variables](#type-annotations-on-variables)
-- [Uninon Types](#uninon-types)
-  - [Defining a Union Type](#defining-a-union-type)
-  - [Working with Union Types](#working-with-union-types)
-- [Literal Types](#literal-types)
-- [Type Aliases](#type-aliases)
-- [Functions](#functions)
-  - [Parameter Type Annotations](#parameter-type-annotations)
-  - [Return Type Annotations](#return-type-annotations)
-  - [Functions as Types](#functions-as-types)
+- [Chapter 2: TypeScript Basics and Types](#chapter-2-typescript-basics-and-types)
+  - [Core Types](#core-types)
+  - [TypeScript Types vs JavaScript Types](#typescript-types-vs-javascript-types)
+  - [Working with Numbers, Strings \& Booleans](#working-with-numbers-strings--booleans)
+  - [Type Assignment and Type Inference](#type-assignment-and-type-inference)
+  - [Object Types](#object-types)
+  - [Array Types](#array-types)
+  - [Tuples](#tuples)
+  - [Enum](#enum)
+  - [The `any` Type](#the-any-type)
+  - [Type Annotations on Variables](#type-annotations-on-variables)
+  - [Uninon Types](#uninon-types)
+  - [Literal Types](#literal-types)
+  - [Type Aliases](#type-aliases)
+  - [Functions](#functions)
 
-# Core Types
+## Core Types
 
 JavaScript has three very commonly
 used [primitives](https://developer.mozilla.org/en-US/docs/Glossary/Primitive): `string`, `number`,
@@ -43,6 +29,8 @@ on a value of those types:
 | string  | ‘Hi’, “Hi”, `Hi` | All text values                                           |
 | boolean | true, false      | Just these two, no “truthy” or “falsy” values             |
 
+> [!NOTE]
+>
 > The type names `String`, `Number`, and `Boolean` (starting with capital
 > letters) are legal, but refer to some special built-in types that will very
 > rarely appear in your code. *Always* use `string`, `number`, or `boolean` for
@@ -89,14 +77,18 @@ let result = add(number1, number2); // error, expected number but got a string
 console.log(result);
 ```
 
+> [!IMPORTANT]
+>
 > TypeScript type system only helps during development (i.e. before the code
 > gets compiled)
 
+> [!TIP]
+>
 > The use of `const` keyword defines a value that will be assigned once an never
 > change. When you need to change the value of a variable we use the keyword
 > `let`.
 
-# TypeScript Types vs JavaScript Types
+## TypeScript Types vs JavaScript Types
 
 To check values during runtime we can use the `typeof` operator.
 
@@ -118,10 +110,12 @@ In TypeScript we can also check the types of parameters during runtime with the
 compile time. Also, if we use an editor such as Visual Studio Code, the editor
 will show errors as you write the code.
 
+> [!NOTE]
+>
 > The key difference is: JavaScript uses _dynamic types_ (resolved at runtime),
 > TypeScript uses _static types_ (set during development)
 
-# Working with Numbers, Strings & Booleans
+## Working with Numbers, Strings & Booleans
 
 Adding boolean variables to our code
 
@@ -170,7 +164,7 @@ add(number1, number2, true, 'Result is: ');
 // Output => Result is: 52.8
 ```
 
-# Type Assignment and Type Inference
+## Type Assignment and Type Inference
 
 **Type Assignment** is the process of explicitly specifying the type of a
 variable, function parameter, or function return value. When you assign a type
@@ -224,7 +218,7 @@ It's important to note that type inference is not always possible or may not
 always produce the desired result. In such cases, it's recommended to use
 explicit type annotations to ensure the desired types are assigned.
 
-# Object Types
+## Object Types
 
 In JavaScript, the fundamental way that we group and pass around data is through
 objects. In TypeScript, we represent those through *object types*.
@@ -284,12 +278,14 @@ const person: {
 };
 ```
 
-> ℹ️ **Note**: For anonymous objects (non-interface or non-alias type), the
-> inferred declaration is always preferred, since we won’t be reusing the type
-> anywhere else. On the other hand, if we do need to reuse the same object
-> structure somewhere else, the interface or alias type are preferred.
+> [!NOTE]
+>
+> For anonymous objects (non-interface or non-alias type), the inferred
+> declaration is always preferred, since we won’t be reusing the type anywhere
+> else. On the other hand, if we do need to reuse the same object structure
+> somewhere else, the interface or alias type are preferred.
 
-# Array Types
+## Array Types
 
 TypeScript, like JavaScript, allows you to work with arrays of values. Array
 types can be written in one of two ways. In the first, you use the type of the
@@ -330,7 +326,7 @@ for (const activity of activities) {
 TypeScript knows that activity is an array of strings, so we can call any string
 function on an array element.
 
-# Tuples
+## Tuples
 
 Tuple types allow you to express an array with **a fixed number of elements**
 whose types are known, but need not be the same. For example, you may want to
@@ -366,7 +362,7 @@ console.log(x[5].toString());
 // Tuple type '[string, number]' of length '2' has no element at index '5'.
 ```
 
-# Enum
+## Enum
 
 Enums are one of the few features TypeScript has which is not a type-level
 extension of JavaScript.
@@ -375,7 +371,7 @@ Enums allow a developer to define a set of named constants. Using enums can make
 it easier to document intent, or create a set of distinct cases. TypeScript
 provides both numeric and string-based enums.
 
-## Numeric enums
+**Numeric enums**
 
 We’ll first start off with numeric enums, which are probably more familiar if
 you’re coming from other languages. An enum can be defined using
@@ -441,7 +437,7 @@ enum E {
 }
 ```
 
-## String enums
+**String enums**
 
 String enums are a similar concept, but have some
 subtle [runtime differences](https://www.typescriptlang.org/docs/handbook/enums.html#enums-at-runtime) as
@@ -465,7 +461,7 @@ doesn’t convey any useful meaning on its own
 often help). String enums allow you to give a meaningful and readable value when
 your code runs, independent of the name of the enum member itself.
 
-## Heterogeneous enums
+**Heterogeneous enums**
 
 Technically enums can be mixed with string and numeric members, but it’s not
 clear why you would ever want to do so:
@@ -480,7 +476,7 @@ enum BooleanLikeHeterogeneousEnum {
 Unless you’re really trying to take advantage of JavaScript’s runtime behavior
 in a clever way, it’s advised that you don’t do this.
 
-## Computed and constant members
+**Computed and constant members**
 
 Each enum member has a value associated with it which can be
 either *constant* or *computed*. An enum member is considered constant if:
@@ -488,32 +484,32 @@ either *constant* or *computed*. An enum member is considered constant if:
 - It is the first member in the enum and it has no initializer, in which case
   it’s assigned the value `0`:
 
-```TypeScript
-// E.X is constant:
-enum E {
-  X,
-}
-```
+  ```TypeScript
+  // E.X is constant:
+  enum E {
+    X,
+  }
+  ```
 
 - It does not have an initializer and the preceding enum member was
   a *numeric* constant. In this case the value of the current enum member will
   be the value of the preceding enum member plus one.
 
-```TypeScript
-// All enum members in 'E1' and 'E2' are constant.
+  ```TypeScript
+  // All enum members in 'E1' and 'E2' are constant.
 
-enum E1 {
-  X,
-  Y,
-  Z,
-}
+  enum E1 {
+    X,
+    Y,
+    Z,
+  }
 
-enum E2 {
-  A = 1,
-  B,
-  C,
-}
-```
+  enum E2 {
+    A = 1,
+    B,
+    C,
+  }
+  ```
 
 - The enum member is initialized with a constant enum expression. A constant
   enum expression is a subset of TypeScript expressions that can be fully
@@ -542,7 +538,7 @@ enum FileAccess {
 }
 ```
 
-## Union enums and enum member types
+**Union enums and enum member types**
 
 There is a special subset of constant enum members that aren’t calculated:
 literal enum members. A literal enum member is a constant enum member with no
@@ -606,7 +602,7 @@ succeeds, then our `||` will short-circuit, and the body of the ‘if’ will 
 However, if the check didn’t succeed, then `x` can *only* be `E.Foo`, so it
 doesn’t make sense to see whether it’s *not* equal to `E.Bar`.
 
-## Enums at runtime
+**Enums at runtime**
 
 Enums are real objects that exist at runtime. For example, the following enum
 
@@ -635,7 +631,7 @@ function f(obj: { X: number }) {
 f(E);
 ```
 
-## Enums at compile time
+**Enums at compile time**
 
 Even though Enums are real objects that exist at runtime, the `keyof` keyword
 works differently than you might expect for typical objects. Instead,
@@ -794,7 +790,7 @@ Here are two approaches to avoiding these pitfalls:
    avoiding the pitfalls above, but a project can still inline its own enums,
    unlike banning const enums entirely.
 
-## Ambient enums
+**Ambient enums**
 
 Ambient enums are used to describe the shape of already existing enum types.
 
@@ -812,7 +808,7 @@ constant if its preceding enum member is considered constant. By contrast, an
 ambient (and non-const) enum member that does not have an initializer
 is *always* considered computed.
 
-## Objects vs Enums
+**Objects vs Enums**
 
 In modern TypeScript, you may not need an enum when an object
 with `as const` could suffice:
@@ -852,7 +848,7 @@ keeps your codebase aligned with the state of JavaScript,
 and [when/if](https://github.com/rbuckton/proposal-enum) enums are added to
 JavaScript then you can move to the additional syntax.
 
-# The `any` Type
+## The `any` Type
 
 TypeScript also has a special type, `any`, that you can use whenever you don’t
 want a particular value to cause typechecking errors.
@@ -886,7 +882,7 @@ the compiler
 flag `[noImplicitAny](https://www.typescriptlang.org/tsconfig#noImplicitAny)` to
 flag any implicit `any` as an error.
 
-# Type Annotations on Variables
+## Type Annotations on Variables
 
 When you declare a variable using `const`, `var`, or `let`, you can optionally
 add a type annotation to explicitly specify the type of the variable:
@@ -895,8 +891,10 @@ add a type annotation to explicitly specify the type of the variable:
 let myName: string = 'Alice';
 ```
 
-> ℹ️ **Note**: TypeScript doesn’t use “types on the left”-style declarations
-> like int x = 0; Type annotations will always go after the thing being typed.
+> [!TIP]
+>
+> TypeScript doesn’t use “types on the left”-style declarations like int x =
+> 0; Type annotations will always go after the thing being typed.
 
 In most cases, though, this isn’t needed. Wherever possible, TypeScript tries to
 automatically *infer* the types in your code. For example, the type of a
@@ -912,13 +910,13 @@ you’re starting out, try using fewer type annotations than you think - you mig
 be surprised how few you need for TypeScript to fully understand what’s going
 on.
 
-# Uninon Types
+## Uninon Types
 
 TypeScript’s type system allows you to build new types out of existing ones
 using a large variety of operators. Now that we know how to write a few types,
 it’s time to start *combining* them in interesting ways.
 
-## Defining a Union Type
+**Defining a Union Type**
 
 The first way to combine types you might see is a *union* type. A union type is
 a type formed from two or more other types, representing values that may be *any
@@ -939,7 +937,7 @@ printId({ myID: 22342 });
 // Argument of type '{ myID: number; }' is not assignable to parameter of type 'string | number'.
 ```
 
-## Working with Union Types
+**Working with Union Types**
 
 It’s easy to *provide* a value matching a union type - simply provide a type
 matching any of the union’s members. If you *have* a value of a union type, how
@@ -1004,7 +1002,7 @@ function getFirstThree(x: number[] | string) {
 }
 ```
 
-# Literal Types
+## Literal Types
 
 In addition to the general types `string` and `number`, we can refer
 to *specific* strings and numbers in type positions.
@@ -1144,7 +1142,7 @@ The `as const` suffix acts like `const` but for the type system, ensuring th
 all properties are assigned the literal type instead of a more general version
 like `string` or `number`.
 
-# Type Aliases
+## Type Aliases
 
 We’ve been using object types and union types by writing them directly in type
 annotations. This is convenient, but it’s common to want to use the same type
@@ -1174,9 +1172,11 @@ object type. For example, a type alias can name a union type:
 type ID = number | string;
 ```
 
-> ℹ️ **Note** that aliases are *only* aliases - you cannot use type aliases to
-> create different/distinct “versions” of the same type. When you use the alias,
-> it’s exactly as if you had written the aliased type. In other words, this code
+> [!WARNING]
+>
+> Aliases are *only* aliases - you cannot use type aliases to create
+> different/distinct “versions” of the same type. When you use the alias, it’s
+> exactly as if you had written the aliased type. In other words, this code
 > might *look* illegal, but is OK according to TypeScript because both types are
 > aliases for the same type:
 
@@ -1194,13 +1194,13 @@ let userInput = sanitizeInput(getInput());
 userInput = 'new input';
 ```
 
-# Functions
+## Functions
 
 Functions are the primary means of passing data around in JavaScript. TypeScript
 allows you to specify the types of both the input and output values of
 functions.
 
-## Parameter Type Annotations
+**Parameter Type Annotations**
 
 When you declare a function, you can add type annotations after each parameter
 to declare what types of parameters the function accepts. Parameter type
@@ -1222,10 +1222,12 @@ greet(42);
 // Argument of type 'number' is not assignable to parameter of type 'string'.
 ```
 
-> ℹ️ **Note:** Even if you don’t have type annotations on your parameters,
-> TypeScript will still check that you passed the right number of arguments.
+> [!NOTE]
+>
+> Even if you don’t have type annotations on your parameters, TypeScript will
+> still check that you passed the right number of arguments.
 
-## Return Type Annotations
+**Return Type Annotations**
 
 You can also add return type annotations. Return type annotations appear after
 the parameter list:
@@ -1304,7 +1306,9 @@ In JavaScript, a function that doesn’t return any value will implicitly return
 the value `undefined`. However, `void` and `undefined` are not the same thing in
 TypeScript.
 
-> ℹ️ **Note:** `void` is not the same as `undefined` for TypeScript.
+> [!NOTE]
+>
+> `void` is not the same as `undefined` for TypeScript.
 
 Annotated return type void:
 
@@ -1314,10 +1318,12 @@ function printResult(num: number): void {
 }
 ```
 
-> A function that returns `void` will return. `undefined` when compiled to
-> JavaScript. `undefined` cannot be assigned as a return type of a function.
-> (TypeScript < 5.0.0). `undefined` is an accepted type to be assigned to a
-> variable.
+> [!IMPORTANT]
+>
+> A function that returns `void` will return `undefined` when compiled to
+> JavaScript. `undefined` cannot be assigned as a return type of a functio.
+> Since (TypeScript < 5.0.0). `undefined` is an accepted type to be assigned to
+> a variable.
 
 ```TypeScript
 console.log(printResult(1)) // Undefined
@@ -1331,7 +1337,7 @@ function printResult(num: number): undefined {
 let someValue: undefined;
 ```
 
-## Functions as Types
+**Functions as Types**
 
 We can declare a variable with a type `function`:
 
@@ -1365,12 +1371,14 @@ combineValues = sum;
 console.log(combineValues(8, 8));
 ```
 
-> ℹ️ **Note**: it is important to mention that the difference of a function type
-> expression and an arrow function declaration is that, instead of a code block,
-> delimited by curly bracers, `() => { }` we need to specify the function return
-> type `() => void` .
+> [!NOTE]
+>
+> It is important to mention that the difference of a function type expression
+> and an arrow function declaration is that, instead of a code block, delimited
+> by curly bracers, `() => { }` we need to specify the function return type
+> `() => void` .
 
-Function types expressions can also be used in callback synthax:
+Function types expressions can also be used in callback functions:
 
 ```TypeScript
 function greeter(fn: (a: string) => void) {
@@ -1388,11 +1396,13 @@ The syntax (a: string) => void means “a function with one parameter, named a, 
 type string, that doesn’t have a return value”. Just like with function
 declarations, if a parameter type isn’t specified, it’s implicitly any.
 
-> **Note** the parameter name is required. The function type (string) => void
-> means “a function with a parameter named string of type any“!
+> [!NOTE]
+>
+> The parameter name is required. The function type `(string) => void` means “a
+> function with a parameter named string of type any“!
 
 ---
 
 [[<< Previous]](../Chapter-01/README.md)
-[[^Top]](#chapter-2-typescript-basics--basic-types)
+[[^Top]](#chapter-2-typescript-basics-and-types)
 [[Next >>]](../Chapter-03/README.md)

@@ -1,13 +1,13 @@
 # Chapter 1: Getting Started
 
 - [Chapter 1: Getting Started](#chapter-1-getting-started)
-- [What is TypeScript?](#what-is-typescript)
-- [Why TypeScript?](#why-typescript)
-- [Setting Up a Code Editor / IDE](#setting-up-a-code-editor--ide)
-- [Installing and using TypeScript](#installing-and-using-typescript)
-- [TypeScript Advantages](#typescript-advantages)
+  - [What is TypeScript?](#what-is-typescript)
+  - [Why TypeScript?](#why-typescript)
+  - [Setting Up a Code Editor / IDE](#setting-up-a-code-editor--ide)
+  - [Installing and using TypeScript](#installing-and-using-typescript)
+  - [TypeScript Advantages](#typescript-advantages)
 
-# What is TypeScript?
+## What is TypeScript?
 
 Typescript is a superset for JavaScript.
 
@@ -25,7 +25,7 @@ Typescript is a superset for JavaScript.
 
 ![What is TypeScript](whatistypescript.png)
 
-# Why TypeScript?
+## Why TypeScript?
 
 - Adds static types to JavaScript. JS is a dynamic typed language. Dynamic typed
   languanges are usually more error prone.
@@ -40,22 +40,27 @@ values, when someone passes strings to the function instead of numbers.
 To avoid this, developers should add validation and sanitization code. With
 TypeScript, you write better code from start.
 
-# Setting Up a Code Editor / IDE
+## Setting Up a Code Editor / IDE
 
-- Download [Visual Studio Code](https://code.visualstudio.com/)
-  - Download extensions
-    - ESLint
-    - Path Intellisense
-    - Prettier
-- Install [Node.js](https://nodejs.org/en) (required to use npm commands to
-  install TypeScript and libraries.
+- [x] Download [Visual Studio Code](https://code.visualstudio.com/)
+- [x] Download extensions
+  - ESLint
+  - Path Intellisense
+  - Prettier
+- [x] Install [Node.js](https://nodejs.org/en) (required to use npm commands to
+      install TypeScript and libraries.
 
-# Installing and using TypeScript
+## Installing and using TypeScript
 
 To install TypeScript follow the steps bellow:
 
 1.  Create a folder for your project in another path different from this repo.
-    This will be your project root folder. Example: `bash mkdir mytsproject `
+    This will be your project root folder.
+
+    ```bash
+    mkdir mytsproject
+    ```
+
 2.  Enter your project root folder.
 
     ```bash
@@ -79,9 +84,11 @@ To install TypeScript follow the steps bellow:
     npm install typescript --save-dev
     ```
 
-    > ℹ️ Node.js is require to use the node package manager (npm). Other install
-    > options at https://www.typescriptlang.org/download. You can learn more
-    > about installing packages with npm at npm-install.
+    > [!IMPORTANT]
+    >
+    > Node.js is required to use the node package manager (npm). Other install
+    > options at [Download TypeScript](https://www.typescriptlang.org/download).
+    > You can learn more about installing packages with npm at npm-install.
 
 7.  NPM will download TypeScript library inside your project folder under the
     node_modules file.
@@ -92,11 +99,10 @@ To install TypeScript follow the steps bellow:
     ```
 
 9.  Create a TypeScript file (any filename with .ts extension). Example.
-    usingts.ts
-    ![https://www.notion.so./usingtsfile.png](https://www.notion.so./usingtsfile.png)
+    `usingts.ts`
 10. Type the following code into your file.
 
-    ```jsx
+    ```TypeScript
       const button = document.getElementById('add')! as HTMLButtonElement;
       const input1 = document.getElementById('num1')! as HTMLInputElement;
       const input2 = document.getElementById('num2')! as HTMLInputElement;
@@ -129,8 +135,9 @@ To install TypeScript follow the steps bellow:
 
 11. Create an index.html file with two input text and a button as bellow.
 
-    > **Note**: The html file should load a .js (JavaScript) file not .ts
-    > (TypeScript).
+    > [!NOTE]
+    >
+    > The html file should load a .js (JavaScript) file not .ts (TypeScript).
 
     ```html
     <!DOCTYPE html>
@@ -159,9 +166,11 @@ To install TypeScript follow the steps bellow:
     npx tsc usingts.ts
     ```
 
-    > **Note**: tsc is the TypeScript compiler. We may run it with npx because
-    > it is not globally installed. If your install TypeScript globally, then
-    > you should run tsc usingts.ts directly.
+    > [!IMPORTANT]
+    >
+    > tsc is the TypeScript compiler. We may run it with npx because it is not
+    > globally installed. If your install TypeScript globally, then you should
+    > run tsc usingts.ts directly.
 
 16. You will see a file with the same name but a different extension. E.g.
     usingts.js. This is our TypeScript source compiled into JavaScript.
@@ -200,7 +209,7 @@ So what’s the point of using TypeScript in this context?
   behavior of our code ahead of the runtime.
 - In JavaScript, to prevent the error we would need to write extra code for
   checking variable types and handling user input errors.
-  ```jsx
+  ```TypeScript
   function add(num1, num2) {
   	if (typeof num1 === "number" && type of num2 === "number" {
   	  return num1 + num2;
@@ -212,7 +221,7 @@ So what’s the point of using TypeScript in this context?
 - We can check that the resulting JavaScript code did this to us when we
   transpiled.
 
-# TypeScript Advantages
+## TypeScript Advantages
 
 Overall, these are the main advantages with TypeScript:
 

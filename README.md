@@ -17,8 +17,9 @@ won't be explained.
 
 Install the following resources:
 
-- [Visual Studio Code](https://code.visualstudio.com/download)
-- [Node.js — Download (nodejs.org)](https://nodejs.org/en/download)
+- [x] [Visual Studio Code](https://code.visualstudio.com/download)
+
+- [x] [Node.js — Download (nodejs.org)](https://nodejs.org/en/download)
 
 ## Content
 
@@ -67,7 +68,7 @@ You can find more about TypeScript in the following links:
 
 ## About me
 
-![](https://avatars.githubusercontent.com/u/13987735?v=4)
+![José Compadre Junior](https://avatars.githubusercontent.com/u/13987735?v=4&s=156)
 
 Solution Architect, post-punk, literature, video games, board games and sci-fi
 lover.
