@@ -11,10 +11,8 @@
 
 Typescript is a superset for JavaScript.
 
-> "TypeScript stands in an unusual relationship to JavaScript. TypeScript offers
-> all of JavaScript’s features, and an additional layer on top of these:
-> TypeScript’s type system."
-> [TypeScript for JavaScript Programmers](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
+> [!NOTE] 
+> "TypeScript stands in an unusual relationship to JavaScript. TypeScript offers all of JavaScript’s features, and an additional layer on top of these: TypeScript’s type system." [TypeScript for JavaScript Programmers](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
 
 - It's not a new programming language.
 - Instead it takes JavaScript and add new features.
@@ -27,18 +25,15 @@ Typescript is a superset for JavaScript.
 
 ## Why TypeScript?
 
-- Adds static types to JavaScript. JS is a dynamic typed language. Dynamic typed
-  languanges are usually more error prone.
+- Adds static types to JavaScript. JS is a dynamic typed language. Dynamic typed languanges are usually more error prone.
 - Avoid type errors and unwanted behaviour
 - Write better code
 
-**Example**: JavaScript will concatenate the values, instad of adding the
-values, when someone passes strings to the function instead of numbers.
+**Example**: JavaScript will concatenate the values, instad of adding the values, when someone passes strings to the function instead of numbers.
 
 ![Why TypeScript](whytypescript.png)
 
-To avoid this, developers should add validation and sanitization code. With
-TypeScript, you write better code from start.
+To avoid this, developers should add validation and sanitization code. With TypeScript, you write better code from start.
 
 ## Setting Up a Code Editor / IDE
 
@@ -47,15 +42,13 @@ TypeScript, you write better code from start.
   - ESLint
   - Path Intellisense
   - Prettier
-- [x] Install [Node.js](https://nodejs.org/en) (required to use npm commands to
-      install TypeScript and libraries.
+- [x] Install [Node.js](https://nodejs.org/en) (required to use npm commands to install TypeScript and libraries.
 
 ## Installing and using TypeScript
 
 To install TypeScript follow the steps bellow:
 
-1.  Create a folder for your project in another path different from this repo.
-    This will be your project root folder.
+1.  Create a folder for your project in another path different from this repo. This will be your project root folder.
 
     ```bash
     mkdir mytsproject
@@ -73,11 +66,8 @@ To install TypeScript follow the steps bellow:
     npm init
     ```
 
-4.  You will be prompted to answer a lot of quetions. Just press enter for all
-    of them. In the end confirm with Yes.
-5.  NPM will create a pakcage.json file. This file saves your project
-    dependencies so you can install it later in another machine or for sharing
-    your project with your team.
+4.  You will be prompted to answer a lot of quetions. Just press enter for all of them. In the end confirm with Yes.
+5.  NPM will create a pakcage.json file. This file saves your project dependencies so you can install it later in another machine or for sharing your project with your team.
 6.  In your terminal type
 
     ```bash
@@ -85,21 +75,16 @@ To install TypeScript follow the steps bellow:
     ```
 
     > [!IMPORTANT]
-    >
-    > Node.js is required to use the node package manager (npm). Other install
-    > options at [Download TypeScript](https://www.typescriptlang.org/download).
-    > You can learn more about installing packages with npm at npm-install.
+    > Node.js is required to use the node package manager (npm). Other install options at [Download TypeScript](https://www.typescriptlang.org/download). You can learn more about installing packages with npm at npm-install.
 
-7.  NPM will download TypeScript library inside your project folder under the
-    node_modules file.
+7.  NPM will download TypeScript library inside your project folder under the node_modules file.
 8.  Open your project folder in VSCode.
 
     ```bash
     code .
     ```
 
-9.  Create a TypeScript file (any filename with .ts extension). Example.
-    `usingts.ts`
+9.  Create a TypeScript file (any filename with .ts extension). Example. `usingts.ts`
 10. Type the following code into your file.
 
     ```TypeScript
@@ -122,21 +107,15 @@ To install TypeScript follow the steps bellow:
 
     a. The function parameters must be declared with a type, in case, number.
 
-    b. The exclamation marks after the functions tells TypeScript that we know
-    that the elements exists in the page (so they won't be null).
+    b. The exclamation marks after the functions tells TypeScript that we know that the elements exists in the page (so they won't be null).
 
-    c. The input elements are declared with the `as` keywork followed by
-    `HTMLInputElement`, as well as the `HTMLButtonElement`, to tell TypeScript
-    that they will be treated as form input element and not just a generic
-    element type.
+    c. The input elements are declared with the `as` keywork followed by `HTMLInputElement`, as well as the `HTMLButtonElement`, to tell TypeScript that they will be treated as form input element and not just a generic element type.
 
-    d. Input values are always strings, so we need to add a plus sign in front
-    of each parameter to convert them into number.
+    d. Input values are always strings, so we need to add a plus sign in front of each parameter to convert them into number.
 
 11. Create an index.html file with two input text and a button as bellow.
 
     > [!NOTE]
-    >
     > The html file should load a .js (JavaScript) file not .ts (TypeScript).
 
     ```html
@@ -158,8 +137,7 @@ To install TypeScript follow the steps bellow:
 
 12. Open the index.html file in the Browser.
 13. Open the JavaScript console by pressing Ctrl + Shift + J.
-14. You will see an error telling the JavaScript file your mentioned doesn't
-    exists. ![Console Error](consoleerror.png)
+14. You will see an error telling the JavaScript file your mentioned doesn't exists. ![Console Error](consoleerror.png)
 15. Now, for our code to work, we need to compile the TypeScript source.
 
     ```bash
@@ -167,15 +145,10 @@ To install TypeScript follow the steps bellow:
     ```
 
     > [!IMPORTANT]
-    >
-    > tsc is the TypeScript compiler. We may run it with npx because it is not
-    > globally installed. If your install TypeScript globally, then you should
-    > run tsc usingts.ts directly.
+    > tsc is the TypeScript compiler. We may run it with npx because it is not globally installed. If your install TypeScript globally, then you should run tsc usingts.ts directly.
 
-16. You will see a file with the same name but a different extension. E.g.
-    usingts.js. This is our TypeScript source compiled into JavaScript.
-17. Now try to open the index.html file again in your browser and test the page.
-    ![Test the page, for instance, typing 1 an 2 an then clicking the add button.](apptest.png)
+16. You will see a file with the same name but a different extension. E.g. usingts.js. This is our TypeScript source compiled into JavaScript.
+17. Now try to open the index.html file again in your browser and test the page. ![Test the page, for instance, typing 1 an 2 an then clicking the add button.](apptest.png)
 
     Test the page, for instance, typing 1 an 2 an then clicking the add button.
 
@@ -187,28 +160,22 @@ What we did was:
 
 1. Created an HTML `index.html`file to serve as our application
 2. Created a TypeScript file `usingts.ts` to start writing our code.
-3. Then we “transpiled” (it means, translate the TypeScript file into pure
-   JavaScript) the file.
+3. Then we “transpiled” (it means, translate the TypeScript file into pure JavaScript) the file.
 4. This way the browser can execute our code as it was plain old JavaScript.
 
 So what’s the point of using TypeScript in this context?
 
-- If we use pure JavaScript, when we add two input field values, instead of a
-  sum (1 + 2 = 3) we would get a string concatenation (1 + 2 = 12).
-- With TypeScript we can specify the type of the variables and parameters we
-  expect to receive:
+- If we use pure JavaScript, when we add two input field values, instead of a sum (1 + 2 = 3) we would get a string concatenation (1 + 2 = 12).
+- With TypeScript we can specify the type of the variables and parameters we expect to receive:
   ```TypeScript
   function add(num1: number, num2: number) {
     return num1 + num2;
   }
   ```
-- TypeScript will infer an try to convert the values if possible, otherwise we
-  would get an error.
+- TypeScript will infer an try to convert the values if possible, otherwise we would get an error.
 - And this prevent us to write code that is error prone.
-- As a _strongly typed language,_ TypeScript help us to know the expected
-  behavior of our code ahead of the runtime.
-- In JavaScript, to prevent the error we would need to write extra code for
-  checking variable types and handling user input errors.
+- As a _strongly typed language,_ TypeScript help us to know the expected behavior of our code ahead of the runtime.
+- In JavaScript, to prevent the error we would need to write extra code for checking variable types and handling user input errors.
   ```TypeScript
   function add(num1, num2) {
   	if (typeof num1 === "number" && type of num2 === "number" {
@@ -218,8 +185,7 @@ So what’s the point of using TypeScript in this context?
   	}
   }
   ```
-- We can check that the resulting JavaScript code did this to us when we
-  transpiled.
+- We can check that the resulting JavaScript code did this to us when we transpiled.
 
 ## TypeScript Advantages
 
@@ -237,5 +203,4 @@ Overall, these are the main advantages with TypeScript:
 
 ---
 
-[[<< Previous]](../README.md) [[^Top]](#chapter-1-getting-started)
-[[Next >>]](../Chapter-02/README.md)
+[[<< Previous]](../README.md) [[^Top]](#chapter-1-getting-started) [[Next >>]](../Chapter-02/README.md)

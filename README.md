@@ -10,8 +10,7 @@ You will be able to write better code and share your team with confidence.
 
 ## Pre-requisites
 
-It is best to have previous JavaScript knowledge, as the basics of JavaScript
-won't be explained.
+It is best to have previous JavaScript knowledge, as the basics of JavaScript won't be explained.
 
 ## Dependencies
 
@@ -70,8 +69,6 @@ You can find more about TypeScript in the following links:
 
 ![José Compadre Junior](https://avatars.githubusercontent.com/u/13987735?v=4&s=156)
 
-Solution Architect, post-punk, literature, video games, board games and sci-fi
-lover.
+Solution Architect, post-punk, literature, video games, board games and sci-fi lover.
 
-[![](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/compadrejunior)
-[![](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/josecompadre/)
+[![](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/compadrejunior) [![](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/josecompadre/)

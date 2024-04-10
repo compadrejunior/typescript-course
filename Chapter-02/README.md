@@ -30,7 +30,6 @@ on a value of those types:
 | boolean | true, false      | Just these two, no “truthy” or “falsy” values             |
 
 > [!NOTE]
->
 > The type names `String`, `Number`, and `Boolean` (starting with capital
 > letters) are legal, but refer to some special built-in types that will very
 > rarely appear in your code. *Always* use `string`, `number`, or `boolean` for
@@ -78,12 +77,10 @@ console.log(result);
 ```
 
 > [!IMPORTANT]
->
 > TypeScript type system only helps during development (i.e. before the code
 > gets compiled)
 
 > [!TIP]
->
 > The use of `const` keyword defines a value that will be assigned once an never
 > change. When you need to change the value of a variable we use the keyword
 > `let`.
@@ -111,7 +108,6 @@ compile time. Also, if we use an editor such as Visual Studio Code, the editor
 will show errors as you write the code.
 
 > [!NOTE]
->
 > The key difference is: JavaScript uses _dynamic types_ (resolved at runtime),
 > TypeScript uses _static types_ (set during development)
 
@@ -279,7 +275,6 @@ const person: {
 ```
 
 > [!NOTE]
->
 > For anonymous objects (non-interface or non-alias type), the inferred
 > declaration is always preferred, since we won’t be reusing the type anywhere
 > else. On the other hand, if we do need to reuse the same object structure
@@ -892,7 +887,6 @@ let myName: string = 'Alice';
 ```
 
 > [!TIP]
->
 > TypeScript doesn’t use “types on the left”-style declarations like int x =
 > 0; Type annotations will always go after the thing being typed.
 
@@ -1173,7 +1167,6 @@ type ID = number | string;
 ```
 
 > [!WARNING]
->
 > Aliases are *only* aliases - you cannot use type aliases to create
 > different/distinct “versions” of the same type. When you use the alias, it’s
 > exactly as if you had written the aliased type. In other words, this code
@@ -1223,7 +1216,6 @@ greet(42);
 ```
 
 > [!NOTE]
->
 > Even if you don’t have type annotations on your parameters, TypeScript will
 > still check that you passed the right number of arguments.
 
@@ -1307,7 +1299,6 @@ the value `undefined`. However, `void` and `undefined` are not the same thi
 TypeScript.
 
 > [!NOTE]
->
 > `void` is not the same as `undefined` for TypeScript.
 
 Annotated return type void:
@@ -1319,7 +1310,6 @@ function printResult(num: number): void {
 ```
 
 > [!IMPORTANT]
->
 > A function that returns `void` will return `undefined` when compiled to
 > JavaScript. `undefined` cannot be assigned as a return type of a functio.
 > Since (TypeScript < 5.0.0). `undefined` is an accepted type to be assigned to
@@ -1372,7 +1362,6 @@ console.log(combineValues(8, 8));
 ```
 
 > [!NOTE]
->
 > It is important to mention that the difference of a function type expression
 > and an arrow function declaration is that, instead of a code block, delimited
 > by curly bracers, `() => { }` we need to specify the function return type
@@ -1397,12 +1386,9 @@ type string, that doesn’t have a return value”. Just like with function
 declarations, if a parameter type isn’t specified, it’s implicitly any.
 
 > [!NOTE]
->
 > The parameter name is required. The function type `(string) => void` means “a
 > function with a parameter named string of type any“!
 
 ---
 
-[[<< Previous]](../Chapter-01/README.md)
-[[^Top]](#chapter-2-typescript-basics-and-types)
-[[Next >>]](../Chapter-03/README.md)
+[[<< Previous]](../Chapter-01/README.md) [[^Top]](#chapter-2-typescript-basics-and-types) [[Next >>]](../Chapter-03/README.md)
