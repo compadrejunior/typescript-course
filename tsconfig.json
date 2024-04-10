@@ -107,7 +107,9 @@
     "skipLibCheck": true /* Skip type checking all .d.ts files. */
   },
   "include": [
-    "src/**/*"
+    "src/**/*",
+    "Chapter-02",
+    "Chapter-01"
   ] /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */,
   "exclude": ["node_modules", "build/**/*"] /* Specify files to be excluded. */
 }

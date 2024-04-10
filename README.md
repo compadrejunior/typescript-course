@@ -18,13 +18,40 @@ Install the following resources:
 
 - [Visual Studio Code](https://code.visualstudio.com/download)
 - [Node.js — Download (nodejs.org)](https://nodejs.org/en/download)
-- [Node.js Notebooks (REPL)](https://marketplace.visualstudio.com/items?itemName=donjayamanne.typescript-notebook)
 
-## How to use it
+## Content
 
-To begin the course, first clone this repository and open the repository root folder inside Visual Studio Code.
+[Chapter 1: Getting Started](./Chapter-01/README.md)
 
-Expand the chapter folders and open the Notebook files.
+[Chapter 2: TypeScript Basics & Basic Types](./Chapter-02/README.md)
+
+[Chapter 3: The TypeScript Compiler and Configuration](./Chapter-03/README.md)
+
+[Chapter 4: Next-generation JavaScript & TypeScript](./Chapter-04/README.md)
+
+[Chapter 5: Classes & Interfaces](./Chapter-05/README.md)
+
+[Chapter 6: Advanced Types](./Chapter-06/README.md)
+
+[Chapter 7: Generics](./Chapter-07/README.md)
+
+[Chapter 8: Decorators](./Chapter-08/README.md)
+
+[Chapter 9: Practice Time! Let’s build a Drag & Drop Project](./Chapter-09/README.md)
+
+[Chapter 10: Modules & Namespaces](./Chapter-10/README.md)
+
+[Chapter 11: Using Webpack with Typescript](./Chapter-11/README.md)
+
+[Chapter 12: 3rd Party Libraries & TypeScript](./Chapter-12/README.md)
+
+[Chapter 13: Time to Practice! Let’s build a “Select & Share Place” App (incl. Google Maps)](./Chapter-13/README.md)
+
+[Chapter 14: React.js & TypeScript](./Chapter-14/README.md)
+
+[Chapter 15: Node.js + Express & TypeScript](./Chapter-15/README.md)
+
+[Chapter 16: Course Roundup ](./Chapter-16/README.md)
 
 ## Resources
 
