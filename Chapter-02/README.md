@@ -1107,6 +1107,14 @@ We can declare a variable with a type `function`:
 ```tsx
 // Creates a variable with the type of function
 let addValues: Function;
+
+function add(n1: number, n1: number) {
+  return n1 + n2;
+}
+
+addValues = add;
+
+console.log(addValues(5, 2));
 ```
 
 ---
