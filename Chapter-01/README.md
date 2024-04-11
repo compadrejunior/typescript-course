@@ -11,7 +11,8 @@
 
 Typescript is a superset for JavaScript.
 
-> [!NOTE] "TypeScript stands in an unusual relationship to JavaScript. TypeScript offers all of JavaScript’s features, and an additional layer on top of these: TypeScript’s type system." [TypeScript for JavaScript Programmers](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
+> [!NOTE] 
+> "TypeScript stands in an unusual relationship to JavaScript. TypeScript offers all of JavaScript’s features, and an additional layer on top of these: TypeScript’s type system." [TypeScript for JavaScript Programmers](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
 
 - It's not a new programming language.
 - Instead it takes JavaScript and add new features.
@@ -73,7 +74,8 @@ To install TypeScript follow the steps bellow:
     npm install typescript --save-dev
     ```
 
-> [!IMPORTANT] Node.js is required to use the node package manager (npm). Other install options at [Download TypeScript](https://www.typescriptlang.org/download). You can learn more about installing packages with npm at npm-install.
+> [!IMPORTANT] 
+> Node.js is required to use the node package manager (npm). Other install options at [Download TypeScript](https://www.typescriptlang.org/download). You can learn more about installing packages with npm at npm-install.
 
 7.  NPM will download TypeScript library inside your project folder under the node_modules file.
 8.  Open your project folder in VSCode.
@@ -130,7 +132,8 @@ To install TypeScript follow the steps bellow:
     </html>
     ```
 
-> [!NOTE] The html file should load a .js (JavaScript) file not .ts (TypeScript).
+> [!NOTE] 
+> The html file should load a .js (JavaScript) file not .ts (TypeScript).
 
 12. Open the index.html file in the Browser.
 13. Open the JavaScript console by pressing Ctrl + Shift + J.
@@ -138,10 +141,10 @@ To install TypeScript follow the steps bellow:
 15. Now, for our code to work, we need to compile the TypeScript source.
 
     ```bash
-    npx tsc using_ts.ts
+    tsc using_ts.ts
     ```
-
-> [!IMPORTANT] tsc is the TypeScript compiler. We may run it with npx because it is not globally installed. If your install TypeScript globally, then you should run tsc using_ts.ts directly.
+> [!NOTE]
+> If your get errors trying to compile, please check the [Chapter 3 - Compiling TypeScript](../Chapter-03/README.md#compiling-typescript) section.
 
 16. You will see a file with the same name but a different extension. E.g. using_ts.js. This is our TypeScript source compiled into JavaScript.
 17. Now try to open the index.html file again in your browser and test the page. ![Test the page, for instance, typing 1 an 2 an then clicking the add button.](apptest.png)
