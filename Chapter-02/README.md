@@ -69,9 +69,11 @@ let result = add(number1, number2); // error, expected number but got a string
 console.log(result);
 ```
 
-> [!IMPORTANT] TypeScript type system only helps during development (i.e. before the code gets compiled)
+> [!IMPORTANT] 
+> TypeScript type system only helps during development (i.e. before the code gets compiled)
 
-> [!TIP] The use of `const` keyword defines a value that will be assigned once an never change. When you need to change the value of a variable we use the keyword `let`.
+> [!TIP] 
+> The use of `const` keyword defines a value that will be assigned once an never change. When you need to change the value of a variable we use the keyword `let`.
 
 ## TypeScript Types vs JavaScript Types
 
@@ -729,7 +731,8 @@ When you declare a variable using `const`, `var`, or `let`, you can optionall
 let myName: string = 'Alice';
 ```
 
-> [!TIP] TypeScript doesn’t use “types on the left”-style declarations like int x = 0; Type annotations will always go after the thing being typed.
+> [!TIP] 
+> TypeScript doesn’t use “types on the left”-style declarations like int x = 0; Type annotations will always go after the thing being typed.
 
 In most cases, though, this isn’t needed. Wherever possible, TypeScript tries to automatically *infer* the types in your code. For example, the type of a variable is inferred based on the type of its initializer:
 
@@ -1144,7 +1147,8 @@ greeter(printToConsole);
 
 The syntax (a: string) => void means “a function with one parameter, named a, of type string, that doesn’t have a return value”. Just like with function declarations, if a parameter type isn’t specified, it’s implicitly any.
 
-> [!NOTE] The parameter name is required. The function type `(string) => void` means “a function with a parameter named string of type any“!
+> [!NOTE] 
+> The parameter name is required. The function type `(string) => void` means “a function with a parameter named string of type any“!
 
 ## The `unknown` Type
 
