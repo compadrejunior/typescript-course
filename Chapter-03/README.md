@@ -27,9 +27,7 @@ npx tsc -p tsconfig.json
 tsc
 ```
 
-If not specified in the tsconfig.json file, TypeScript will output the .js files in the same directory of the source folder. This is intended to build multiple files without having to specify each single file name.
-
-We will see later how to specify compiling options.
+If not specified in the tsconfig.json file, TypeScript will output the .js files in the same directory of the source folder. We will see later how we can  specify compiling options that will determine what to build and where to put our compiled code.
 
 ## The Watch Mode
 
