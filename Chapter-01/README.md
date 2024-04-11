@@ -11,8 +11,7 @@
 
 Typescript is a superset for JavaScript.
 
-> [!NOTE] 
-> "TypeScript stands in an unusual relationship to JavaScript. TypeScript offers all of JavaScript’s features, and an additional layer on top of these: TypeScript’s type system." [TypeScript for JavaScript Programmers](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
+> [!NOTE] "TypeScript stands in an unusual relationship to JavaScript. TypeScript offers all of JavaScript’s features, and an additional layer on top of these: TypeScript’s type system." [TypeScript for JavaScript Programmers](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
 
 - It's not a new programming language.
 - Instead it takes JavaScript and add new features.
@@ -25,11 +24,11 @@ Typescript is a superset for JavaScript.
 
 ## Why TypeScript?
 
-- Adds static types to JavaScript. JS is a dynamic typed language. Dynamic typed languanges are usually more error prone.
-- Avoid type errors and unwanted behaviour
+- Adds static types to JavaScript. JS is a dynamic typed language. Dynamic typed languages are usually more error prone.
+- Avoid type errors and unwanted behavior
 - Write better code
 
-**Example**: JavaScript will concatenate the values, instad of adding the values, when someone passes strings to the function instead of numbers.
+**Example**: JavaScript will concatenate the values, instead of adding the values, when someone passes strings to the function instead of numbers.
 
 ![Why TypeScript](whytypescript.png)
 
@@ -51,13 +50,13 @@ To install TypeScript follow the steps bellow:
 1.  Create a folder for your project in another path different from this repo. This will be your project root folder.
 
     ```bash
-    mkdir mytsproject
+    mkdir my_ts_project
     ```
 
 2.  Enter your project root folder.
 
     ```bash
-    cd mytsproject
+    cd my_ts_project
     ```
 
 3.  Create a Node.js project with the following command.
@@ -66,16 +65,15 @@ To install TypeScript follow the steps bellow:
     npm init
     ```
 
-4.  You will be prompted to answer a lot of quetions. Just press enter for all of them. In the end confirm with Yes.
-5.  NPM will create a pakcage.json file. This file saves your project dependencies so you can install it later in another machine or for sharing your project with your team.
+4.  You will be prompted to answer a lot of questions. Just press enter for all of them. In the end confirm with Yes.
+5.  NPM will create a package.json file. This file saves your project dependencies so you can install it later in another machine or for sharing your project with your team.
 6.  In your terminal type
 
     ```bash
     npm install typescript --save-dev
     ```
 
-> [!IMPORTANT]
-> Node.js is required to use the node package manager (npm). Other install options at [Download TypeScript](https://www.typescriptlang.org/download). You can learn more about installing packages with npm at npm-install.
+> [!IMPORTANT] Node.js is required to use the node package manager (npm). Other install options at [Download TypeScript](https://www.typescriptlang.org/download). You can learn more about installing packages with npm at npm-install.
 
 7.  NPM will download TypeScript library inside your project folder under the node_modules file.
 8.  Open your project folder in VSCode.
@@ -84,7 +82,7 @@ To install TypeScript follow the steps bellow:
     code .
     ```
 
-9.  Create a TypeScript file (any filename with .ts extension). Example. `usingts.ts`
+9.  Create a TypeScript file (any filename with .ts extension). Example. `using_ts.ts`
 10. Type the following code into your file.
 
     ```TypeScript
@@ -109,7 +107,7 @@ To install TypeScript follow the steps bellow:
 
     b. The exclamation marks after the functions tells TypeScript that we know that the elements exists in the page (so they won't be null).
 
-    c. The input elements are declared with the `as` keywork followed by `HTMLInputElement`, as well as the `HTMLButtonElement`, to tell TypeScript that they will be treated as form input element and not just a generic element type.
+    c. The input elements are declared with the `as` keyword followed by `HTMLInputElement`, as well as the `HTMLButtonElement`, to tell TypeScript that they will be treated as form input element and not just a generic element type.
 
     d. Input values are always strings, so we need to add a plus sign in front of each parameter to convert them into number.
 
@@ -127,13 +125,12 @@ To install TypeScript follow the steps bellow:
         <input type="text" name="num1" id="num1" />
         <input type="text" name="num2" id="num2" />
         <button id="add">Add</button>
-        <script src="usingts.js"></script>
+        <script src="using_ts.js"></script>
       </body>
     </html>
     ```
 
-> [!NOTE]
-> The html file should load a .js (JavaScript) file not .ts (TypeScript).
+> [!NOTE] The html file should load a .js (JavaScript) file not .ts (TypeScript).
 
 12. Open the index.html file in the Browser.
 13. Open the JavaScript console by pressing Ctrl + Shift + J.
@@ -141,13 +138,12 @@ To install TypeScript follow the steps bellow:
 15. Now, for our code to work, we need to compile the TypeScript source.
 
     ```bash
-    npx tsc usingts.ts
+    npx tsc using_ts.ts
     ```
 
-> [!IMPORTANT]
-> tsc is the TypeScript compiler. We may run it with npx because it is not globally installed. If your install TypeScript globally, then you should run tsc usingts.ts directly.
+> [!IMPORTANT] tsc is the TypeScript compiler. We may run it with npx because it is not globally installed. If your install TypeScript globally, then you should run tsc using_ts.ts directly.
 
-16. You will see a file with the same name but a different extension. E.g. usingts.js. This is our TypeScript source compiled into JavaScript.
+16. You will see a file with the same name but a different extension. E.g. using_ts.js. This is our TypeScript source compiled into JavaScript.
 17. Now try to open the index.html file again in your browser and test the page. ![Test the page, for instance, typing 1 an 2 an then clicking the add button.](apptest.png)
 
     Test the page, for instance, typing 1 an 2 an then clicking the add button.
@@ -159,7 +155,7 @@ To install TypeScript follow the steps bellow:
 What we did was:
 
 1. Created an HTML `index.html`file to serve as our application
-2. Created a TypeScript file `usingts.ts` to start writing our code.
+2. Created a TypeScript file `using_ts.ts` to start writing our code.
 3. Then we “transpiled” (it means, translate the TypeScript file into pure JavaScript) the file.
 4. This way the browser can execute our code as it was plain old JavaScript.
 

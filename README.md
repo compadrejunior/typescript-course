@@ -2,7 +2,7 @@
 
 This repository is meant for studying TypeScript.
 
-It encompases full TypeScript content organized as a learning path.
+It encompasses full TypeScript content organized as a learning path.
 
 In this course you will learn all TypeScript features, when an how to use it.
 
@@ -58,16 +58,16 @@ Install the following resources:
 
 You can find more about TypeScript in the following links:
 
-- [TypeScript: The starting point for learning TypeScript (typescriptlang.org)](https://www.typescriptlang.org/docs/)
+- [TypeScript: The starting point for learning TypeScript](https://www.typescriptlang.org/docs/)
 - [TypeScript Tutorial](https://www.typescripttutorial.net/)
 - [TypeScript Tutorial (w3schools.com)](https://www.w3schools.com/typescript/)
-- [Learn TypeScript – The Ultimate Beginners Guide (freecodecamp.org)](https://www.freecodecamp.org/news/learn-typescript-beginners-guide/)
-- [TypeScript Tutorial (tutorialspoint.com)](https://www.tutorialspoint.com/typescript/index.htm)
-- [TypeScript Tutorial | Learn TypeScript for Free - GeeksforGeeks](https://www.geeksforgeeks.org/typescript/)
+- [Learn TypeScript – The Ultimate Beginners Guide](https://www.freecodecamp.org/news/learn-typescript-beginners-guide/)
+- [TypeScript Tutorial](https://www.tutorialspoint.com/typescript/index.htm)
+- [TypeScript Tutorial | Learn TypeScript for Free](https://www.geeksforgeeks.org/typescript/)
 
 ## About me
 
-![José Compadre Junior](https://avatars.githubusercontent.com/u/13987735?v=4&s=156)
+![About Me](https://avatars.githubusercontent.com/u/13987735?v=4&s=156)
 
 Solution Architect, post-punk, literature, video games, board games and sci-fi lover.
 
