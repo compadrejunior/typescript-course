@@ -27,7 +27,8 @@ JavaScript has three very commonly used [primitives](https://developer.mozilla.
 | string | ‘Hi’, “Hi”, `Hi` | All text values |
 | boolean | true, false | Just these two, no “truthy” or “falsy” values |
 
-> [!NOTE] The type names `String`, `Number`, and `Boolean` (starting with capital letters) are legal, but refer to some special built-in types that will very rarely appear in your code. *Always* use `string`, `number`, or `boolean` for types.
+> [!NOTE] 
+> The type names `String`, `Number`, and `Boolean` (starting with capital letters) are legal, but refer to some special built-in types that will very rarely appear in your code. *Always* use `string`, `number`, or `boolean` for types.
 
 **With JavaScript:** we use dynamic typing, that means, JavaScript will infer the type of a variable during the assignment, on the runtime only. So we only know errors when we run the code.
 
@@ -91,7 +92,8 @@ function add(n1, n2) {
 
 In TypeScript we can also check the types of parameters during runtime with the `typeof` operator. But it’s not necessary, since TypeScript will check during compile time. Also, if we use an editor such as Visual Studio Code, the editor will show errors as you write the code.
 
-> [!NOTE] The key difference is: JavaScript uses _dynamic types_ (resolved at runtime), TypeScript uses _static types_ (set during development)
+> [!NOTE] 
+> The key difference is: JavaScript uses _dynamic types_ (resolved at runtime), TypeScript uses _static types_ (set during development)
 
 ## Working with Numbers, Strings & Booleans
 
@@ -236,7 +238,8 @@ const person: {
 };
 ```
 
-> [!NOTE] For anonymous objects (non-interface or non-alias type), the inferred declaration is always preferred, since we won’t be reusing the type anywhere else. On the other hand, if we do need to reuse the same object structure somewhere else, the interface or alias type are preferred.
+> [!NOTE] 
+> For anonymous objects (non-interface or non-alias type), the inferred declaration is always preferred, since we won’t be reusing the type anywhere else. On the other hand, if we do need to reuse the same object structure somewhere else, the interface or alias type are preferred.
 
 ## Array Types
 
@@ -960,7 +963,8 @@ You can actually use a type alias to give a name to any type at all, not just an
 type ID = number | string;
 ```
 
-> [!WARNING] Aliases are *only* aliases - you cannot use type aliases to create different/distinct “versions” of the same type. When you use the alias, it’s exactly as if you had written the aliased type. In other words, this code might *look* illegal, but is OK according to TypeScript because both types are aliases for the same type:
+> [!WARNING] 
+> Aliases are *only* aliases - you cannot use type aliases to create different/distinct “versions” of the same type. When you use the alias, it’s exactly as if you had written the aliased type. In other words, this code might *look* illegal, but is OK according to TypeScript because both types are aliases for the same type:
 
 ```TypeScript
 type UserInputSanitizedString = string;
@@ -999,7 +1003,8 @@ greet(42);
 // Argument of type 'number' is not assignable to parameter of type 'string'.
 ```
 
-> [!NOTE] Even if you don’t have type annotations on your parameters, TypeScript will still check that you passed the right number of arguments.
+> [!NOTE] 
+> Even if you don’t have type annotations on your parameters, TypeScript will still check that you passed the right number of arguments.
 
 **Return Type Annotations**
 
@@ -1062,7 +1067,8 @@ function noop() {
 
 In JavaScript, a function that doesn’t return any value will implicitly return the value `undefined`. However, `void` and `undefined` are not the same thing in TypeScript.
 
-> [!NOTE] > `void` is not the same as `undefined` for TypeScript.
+> [!NOTE] 
+> `void` is not the same as `undefined` for TypeScript.
 
 Annotated return type void:
 
@@ -1072,7 +1078,8 @@ function printResult(num: number): void {
 }
 ```
 
-> [!IMPORTANT] A function that returns `void` will return `undefined` when compiled to JavaScript. `undefined` cannot be assigned as a return type of a function. Since (TypeScript < 5.0.0). `undefined` is an accepted type to be assigned to a variable.
+> [!IMPORTANT] 
+> A function that returns `void` will return `undefined` when compiled to JavaScript. `undefined` cannot be assigned as a return type of a function. Since (TypeScript < 5.0.0). `undefined` is an accepted type to be assigned to a variable.
 
 ```TypeScript
 console.log(printResult(1)) // Undefined
@@ -1118,7 +1125,8 @@ combineValues = sum;
 console.log(combineValues(8, 8));
 ```
 
-> [!NOTE] It is important to mention that the difference of a function type expression and an arrow function declaration is that, instead of a code block, delimited by curly bracers, `() => { }` we need to specify the function return type `() => void` .
+> [!NOTE] 
+> It is important to mention that the difference of a function type expression and an arrow function declaration is that, instead of a code block, delimited by curly bracers, `() => { }` we need to specify the function return type `() => void` .
 
 Function types expressions can also be used in callback functions:
 
