@@ -3,6 +3,7 @@
   - [Compiling TypeScript](#compiling-typescript)
   - [The Watch Mode](#the-watch-mode)
   - [Configuring TypeScript for your project](#configuring-typescript-for-your-project)
+  - [Compiling Options](#compiling-options)
 
 ## Compiling TypeScript
 
@@ -142,7 +143,7 @@ Let's change the `tsconfig.json` options to reflect this structure. For the sake
 }
 ```
 
-Now, when we compile with the `tsc` command in the root folder, and it will respect the configurations we set. 
+Now, when we compile with the `tsc` command in the root folder, and it will respect the configurations we set (read files from the src folder and output compiled files to outDir). 
 
 > [!TIP]
 > You don't need to use the `tsc --init` command to create a configuration file. If you are an experienced TypeScript developer, you may find better to just create the file manually and add just the options you need. 
@@ -161,6 +162,22 @@ include and exclude support wildcard characters to make glob patterns:
 - `**/` matches any directory nested to any level
 
 If the last path segment in a pattern does not contain a file extension or wildcard character, then it is treated as a directory, and files with supported extensions inside that directory are included (e.g. .ts, .tsx, and .d.ts by default, with .js and .jsx if allowJs is set to true).
+
+## Compiling Options
+
+Here we will check some important options that you, as a TypeScript developer, should look at when configuring your tsconfig.json project file.
+
+- `target`: specify what version of JavaScript the output files should be generated. It's important what version is compatible with the target JavaScript runtime (browser, Node.js, etc.). The default value is ES3 but modern browsers support ES6. The target setting changes which JS features are downgraded and which are left intact. For example, an arrow function `() =>` this will be turned into an equivalent `function` expression if target is ES5 or lower.
+- `module`: specify how to export and import modules. We will see this ahead, but in general, modules helps us to export JavaScript code to be imported in other codes (almost like the includes statement in other languages). In JavaScript there is two ways to handle modules: the import/export keywords and using the require() function. See: [JavaScript modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules).
+- `lib`: depending on the runtime environment you will use your code, you can specify what JavaScript libraries will be available for TypeScript. For instance, in browser, the Document Object Model (DOM) is a library that allows JavaScript to manipulate HTML elements in a page. See [TSConfig reference](https://www.typescriptlang.org/tsconfig#lib).
+- `allowJS`: specify if your want JavaScript code in your source folder to also be compiled. TypeScript can convert these files into another .js files, respecting other settings like `targe` option, to rewrite the code in the target JS style. 
+- `checkJS`: if allowJS is specified, errors in source JS files will also be reported by TypeScript. 
+- `jsx`: if you use React, tells TypeScript to preserve the JSX special syntax in your code.
+- `declaration`: tells tsc to generates .d.ts files in your project. Declaration files describes all types signatures in your project. This is useful if you are shipping your code as a library for other developers to include in their projects. 
+- `declarationMap`: create a map files that helps Developer Tools in the browser to read and interpret the generated declaration files d.ts files.
+- `sourceMap`: if set to true, the generated .js files can be read and interpreted by Developer Tools in the browser. Generated JS files usually are written in a non human readable way. Source maps solve this by creating a translation map between JavaScript output and our TypeScript source. 
+- `noEmitOnError`: if set to true, stops to show errors when compiling your code. It is set by default to false, and should remain this way since we always want to see compilation errors. Also, if set to true and we have compilation errors, TypeScript will not compile.
+- `strict`: there are lots of fine tunning options for TypeScript to check the code against rules and best practices. When we set strict to true, which is the default, all the rules will be checked against our code. If set to false, we may need to adjust all other checks options one by one. Since the list is extensive, it is best to check all the *Type Checking* options to know exactly what will be checked. See [Type Checking](https://www.typescriptlang.org/tsconfig#Type_Checking_6248) documentation.
 
 --- 
 
