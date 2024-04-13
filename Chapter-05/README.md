@@ -960,7 +960,7 @@ In TypeScript, you can make parameters, properties, and methods optional by usin
 
 **Optional Parameters**:
 
-Optional parameters are parameters in a function or method that can be omitted when calling the function. To make a parameter optional, you add a ? symbol after the parameter name in the function declaration. Optional parameters must come after the required parameters.
+Optional parameters are parameters in a function or method that can be omitted when calling the function. To make a parameter optional, you add a `?` symbol after the parameter name in the function declaration. Optional parameters must come after the required parameters.
 
 **Example**:
 
@@ -977,11 +977,11 @@ greet("John"); // Output: Hello John.
 greet("Jane", 25); // Output: Hello Jane, you are 25 years old.
 ```
 
-In this example, the age property is optional in the Person interface. When creating objects of type Person, you can choose to include or omit the age property.
+In this example, the `age` parameter is optional. When calling the `greet` function, you can omit the `age` argument, and it will default to `undefined`. If the `age` argument is provided, it will be displayed in the output.
 
 **Optional Properties**:
 
-Optional properties are properties in an object that may or may not be present. To define an optional property in an interface, you add a ? symbol after the property name in the interface declaration.
+Optional properties are properties in an object that may or may not be present. To define an optional property in an interface, you add a `?` symbol after the property name in the interface declaration.
 
 **Example**:
 
@@ -995,7 +995,7 @@ let person1: Person = { name: "John" };
 let person2: Person = { name: "Jane", age: 25 };
 ```
 
-In this example, the age property is optional in the Person interface. When creating objects of type Person, you can choose to include or omit the age property.
+In this example, the `age` property is optional in the `Person` interface. When creating objects of type `Person`, you can choose to include or omit the `age` property.
 
 **Optional Methods**:
 
@@ -1018,6 +1018,17 @@ class ConsoleLogger implements Logger {
 let logger: Logger = new ConsoleLogger();
 logger.log("This is a log message.");
 ```
+
+In this example, the `error` method in the `Logger` interface is optional. The `ConsoleLogger` class implements the `log` method but does not implement the `error` method. When using the `logger` object, you can only call the `log` method, as the `error` method is optional.
+
+
+**Use Cases**:
+
+- Optional parameters are useful when you want to provide flexibility in function calls, allowing certain arguments to be omitted.
+- Optional properties are helpful when dealing with objects that may have varying sets of properties, allowing for more flexible object structures.
+- Optional methods are beneficial when you want to define a common interface but allow different implementations to choose whether or not to implement certain methods.
+
+Optional parameters, properties, and methods provide flexibility and allow for more adaptable code structures in TypeScript. They are particularly useful when dealing with scenarios where certain elements may or may not be present or required.
 
 ---
 
