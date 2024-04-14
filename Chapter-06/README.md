@@ -11,6 +11,7 @@
   - [Optional Chaining](#optional-chaining)
   - [Nullish Coalescing](#nullish-coalescing)
   - [Boxed Types](#boxed-types)
+  - [Keyof Type Operator](#keyof-type-operator)
 
 ## Intersection Types
 
@@ -565,6 +566,27 @@ Boxed types refer to objects that wrap primitive values (such as `numbers`, `str
 
 It is generally recommended to use primitive types (`number`, `string`, `boolean`, etc.) instead of their corresponding boxed types (`Number`, `String`, `Boolean`, etc.) in JavaScript, unless there is a specific need for the additional functionality provided by the boxed types.
 
+## Keyof Type Operator
+
+The keyof operator takes an object type and produces a string or numeric literal union of its keys. The following type P is the same type as type P = "x" | "y":
+
+```TypeScript
+type Point = { x: number; y: number };
+type P = keyof Point; // type P = keyof Point
+```
+
+If the type has a string or number index signature, keyof will return those types instead:
+
+```TypeScript
+type Arrayish = { [n: number]: unknown };
+type A = keyof Arrayish; // type A = number
+ 
+type Mapish = { [k: string]: boolean };
+type M = keyof Mapish; // type M = string | number
+```
+
+> [!NOTE]
+> Note that in this example, `M` is `string | number` — this is because JavaScript object keys are always coerced to a string, so `obj[0]` is always the same as `obj["0"]`.
 ---
 
 [[<< Previous]](../Chapter-05/README.md) [[^Top]](#chapter-6--advanced-types) [[Next >>]](../Chapter-07/README.md)
