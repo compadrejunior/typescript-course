@@ -38,21 +38,16 @@ Install the following resources:
 
 [Chapter 8: Decorators](./Chapter-08/README.md)
 
-[Chapter 9: Practice Time! Let’s build a Drag & Drop Project](./Chapter-09/README.md)
+[Chapter 9: Modules & Namespaces](./Chapter-9/README.md)
 
-[Chapter 10: Modules & Namespaces](./Chapter-10/README.md)
+[Chapter 10: Using Webpack with Typescript](./Chapter-10/README.md)
 
-[Chapter 11: Using Webpack with Typescript](./Chapter-11/README.md)
+[Chapter 11: 3rd Party Libraries & TypeScript](./Chapter-11/README.md)
 
-[Chapter 12: 3rd Party Libraries & TypeScript](./Chapter-12/README.md)
+[Chapter 12: React.js & TypeScript](./Chapter-12/README.md)
 
-[Chapter 13: Time to Practice! Let’s build a “Select & Share Place” App (incl. Google Maps)](./Chapter-13/README.md)
+[Chapter 13: Node.js + Express & TypeScript](./Chapter-13/README.md)
 
-[Chapter 14: React.js & TypeScript](./Chapter-14/README.md)
-
-[Chapter 15: Node.js + Express & TypeScript](./Chapter-15/README.md)
-
-[Chapter 16: Course Roundup ](./Chapter-16/README.md)
 
 ## Resources
 
