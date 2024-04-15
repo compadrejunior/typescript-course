@@ -39,7 +39,7 @@ namespace Generics {
   const commentEndpoint: EndpointURL<'comments'> =
     'https://api.example.com/comments';
 
-  // Mapped Uninon Types
+  // Mapped Union Types
   type EventConfig<Events extends { kind: string }> = {
     [E in Events as E['kind']]: (event: E) => void;
   };
