@@ -113,4 +113,4 @@ Lean more about Webpack and Typescript in the [Webpack](https://webpack.js.org/g
 
 --- 
 
-[[<< Previous]](../Chapter-09/README.md) [[^Top]](#chapter-10-using-webpack-with-typescript) [[Next >>]](../Chapter-11/README.md)
+[[<< Previous]](../Chapter-09/README.md) [[^Top]](#chapter-10-using-webpack-with-typescript)

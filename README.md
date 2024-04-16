@@ -42,13 +42,6 @@ Install the following resources:
 
 [Chapter 10: Using Webpack with Typescript](./Chapter-10/README.md)
 
-[Chapter 11: 3rd Party Libraries & TypeScript](./Chapter-11/README.md)
-
-[Chapter 12: React.js & TypeScript](./Chapter-12/README.md)
-
-[Chapter 13: Node.js + Express & TypeScript](./Chapter-13/README.md)
-
-
 ## Resources
 
 You can find more about TypeScript in the following links:
