@@ -32,78 +32,76 @@ These situations highlight the advantages of integrating Webpack with TypeScript
 
 To use Webpack with TypeScript, you can follow the steps outlined below, which are based on the information from various sources:
 
-1. Install Dependencies:
+1. Install the necessary dependencies for using TypeScript with Webpack. This includes packages such as `webpack`, `webpack-cli`, `ts-loader`, and `webpack-dev-server`.
 
-   - Install the necessary dependencies for using TypeScript with Webpack. This includes packages such as webpack, webpack-cli, ts-loader, and webpack-dev-server.
-      ```bash
-      npm install --save-dev webpack webpack-cli webpack-dev-server typescript ts-loader
-      ```
+    ```bash
+    npm install --save-dev webpack webpack-cli webpack-dev-server typescript ts-loader
+    ```
 
-2. Configure tsconfig.json:
-
-   - In your tsconfig.json file, ensure that you have the following settings:
-      - Set "allowSyntheticDefaultImports" to true.
-      - Set "esModuleInterop" to true.
-      - Avoid setting the module to "CommonJS" to enable Webpack to perform tree-shaking effectively.
+2. In your `tsconfig.json` file, ensure that you have the following settings:
+   - Set `outDir` to your output files destination, e.g. `./dist`.
+   - Set `sourceMap` to `true`.
+   - Set `module` to `ES2015`.
+   - Set `target` to `ES6`
+   - Set `allowJs` to `true`
+   - Set `moduleResolution` to `node`
+   - Set `allowSyntheticDefaultImports` to `true`
+   - Set `esModuleInterop` to `true`
 
       ```json
       {
         "compilerOptions": {
-          "outDir": "./dist/",
-          "noImplicitAny": true,
-          "module": "es6",
-          "target": "es5",
-          "jsx": "react",
+          "outDir": "./dist",
+          "module": "ES2015",
+          "target": "ES6",
+          "sourceMap": true,
           "allowJs": true,
-          "moduleResolution": "node"
+          "moduleResolution": "node",
+          "allowSyntheticDefaultImports": true,
+          "esModuleInterop": true
         }
       }
       ```
 
-3. Webpack Configuration:
-
-   - Create a webpack.config.js file to configure Webpack for TypeScript.
-   - Use the ts-loader to instruct Webpack to compile TypeScript code into JavaScript. This loader relies on your tsconfig.json configuration.
+3. Create a `webpack.config.js` file to configure Webpack for TypeScript.Use the ts-loader to instruct Webpack to compile TypeScript code into JavaScript. This loader relies on your tsconfig.json configuration.
   
-    ```TypeScript
-    const path = require('path');
+      ```TypeScript
+      const path = require('path');
 
-    module.exports = {
-      entry: './src/index.ts',
-      module: {
-        rules: [
-          {
-            test: /\.tsx?$/,
-            use: 'ts-loader',
-            exclude: /node_modules/,
-          },
-        ],
-      },
-      resolve: {
-        extensions: ['.tsx', '.ts', '.js'],
-      },
-      output: {
-        filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist'),
-      },
-    };
-    ```
+      module.exports = {
+        devtool: 'inline-source-map',
+        entry: './src/app/index.ts',
+        mode: 'production',
+        module: {
+          rules: [
+            {
+              test: /\.ts$/,
+              use: 'ts-loader',
+            },
+          ],
+        },
+        output: {
+          filename: 'bundle.js',
+          path: path.resolve(__dirname, 'dist'),
+        },
+        resolve: {
+          extensions: ['.ts', '.js'],
+        },
+      };
+      ```
 
-4. Type-Checking During Bundling:
-
-   - Consider using the ForkTsCheckerWebpackPlugin Webpack plugin to enable type-checking during the bundling process. This plugin allows for efficient type-checking while bundling the code.
-
-5. Bundling and Minification:
-
-   - Webpack can be used to bundle and minify a TypeScript app, creating a single JavaScript file. This allows for efficient optimization of TypeScript applications using Webpack plugins.
-
-6. Using Webpack Development Server:
-
-   - Webpack provides a development server capable of serving an HTML, JavaScript, and CSS app. This server can be used for local development and testing of the TypeScript application.
-
-7. Additional Enhancements:
-
-   - Various loaders and plugins can be used with Webpack and TypeScript to further enhance the development workflow. These can be installed via npm or yarn and added to the webpack.config.js configuration.
+4. Add a build script to your package.json.
+   ```JSON
+   ...
+   "scripts": {
+    "build": "webpack"
+   }
+   ...
+   ```
+5. Run the build script.
+   ```bash
+   npm run build
+   ```
 
 By following these steps, you can effectively set up and use Webpack with TypeScript, allowing for efficient bundling, optimization, and development of TypeScript applications.
 
