@@ -32,7 +32,7 @@ These situations highlight the advantages of integrating Webpack with TypeScript
 
 To use Webpack with TypeScript, you can follow the steps outlined below, which are based on the information from various sources:
 
-1. Install the necessary dependencies for using TypeScript with Webpack. This includes packages such as `webpack`, `webpack-cli`, `ts-loader`, and `webpack-dev-server`.
+1. Install the necessary dependencies for using TypeScript with Webpack. This includes packages such as `webpack`, `webpack-cli`, `ts-loader`, `clean-webpack-plugin` and `webpack-dev-server`.
 
     ```bash
     npm install --save-dev webpack webpack-cli webpack-dev-server typescript ts-loader
@@ -67,6 +67,7 @@ To use Webpack with TypeScript, you can follow the steps outlined below, which a
   
       ```TypeScript
       const path = require('path');
+      const CleanPlugin = require('clean-webpack-plugin');
 
       module.exports = {
         devtool: 'inline-source-map',
@@ -80,6 +81,7 @@ To use Webpack with TypeScript, you can follow the steps outlined below, which a
             },
           ],
         },
+        plugins: [new CleanPlugin.CleanWebpackPlugin()],
         output: {
           filename: 'bundle.js',
           path: path.resolve(__dirname, 'dist'),
